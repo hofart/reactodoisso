@@ -6,7 +6,7 @@
 
 
 - [x] Insert new task
-- [ ] Delete task
+- [x] Delete task
 - [ ] Edit task
 - [ ] Insert new category
 - [ ] Edit category
