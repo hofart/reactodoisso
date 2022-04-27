@@ -1,26 +1,17 @@
 import * as React from 'react';
-
-export const Action = {
-  addTask: 'add',
-};
-
-export const taskReducer = (state, action) => {
-  switch (action.type) {
-    case Action.addTask:
-      return [...state, action.task];
-    default:
-      return state;
-  }
-};
+import { TaskReducer } from '../reducers/TaskReducer';
 
 export const TaskContext = React.createContext();
 
 function Provider({ children }) {
-  const [tasks, dispatch] = React.useReducer(taskReducer, []);
+  const [tasks, dispatch] = React.useReducer(TaskReducer, []);
+
+  const value = React.useMemo(() => ({
+    tasks, dispatch,
+  }), [tasks]);
 
   return (
-    // eslint-disable-next-line react/jsx-no-constructed-context-values
-    <TaskContext.Provider value={{ tasks, dispatch }}>
+    <TaskContext.Provider value={value}>
       {children}
     </TaskContext.Provider>
   );

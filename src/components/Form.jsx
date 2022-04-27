@@ -1,10 +1,12 @@
 import * as React from 'react';
-import { TaskContext, Action } from '../context/TodoList';
+import { TaskContext } from '../context/TodoList';
+import { Action } from '../actions/TodoListAction';
 
 function Form() {
   const { dispatch } = React.useContext(TaskContext);
   const [title, setTitle] = React.useState('');
   const [description, setDescription] = React.useState('');
+  const id = React.useId();
 
   const handleTask = (e) => {
     e.preventDefault();
@@ -14,7 +16,7 @@ function Form() {
     dispatch({
       type: Action.addTask,
       task: {
-        id: Math.floor(Math.random() * 9999),
+        id: `${id}-${title}`,
         title,
         description,
         done: false,
