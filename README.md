@@ -2,7 +2,7 @@
   <p align="center">TodoIsso</p>
 </h1>
 
-> This is my first react project, this layout is based on [Todoist App](https://todoist.com/app/).
+> This is my first react project, with unit test, this layout is based on [Todoist App](https://todoist.com/app/).
 
 
 - [x] Insert new task
