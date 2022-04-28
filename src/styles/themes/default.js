@@ -12,5 +12,8 @@ export default {
     fonts: {
       primary: "'Urbanist', sans-serif",
     },
+    radius: {
+      base: '4px',
+    },
   },
 };

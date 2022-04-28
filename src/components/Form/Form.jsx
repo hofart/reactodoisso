@@ -1,6 +1,6 @@
 import * as React from 'react';
-import { TaskContext } from '../context/TodoList';
-import { Action } from '../actions/TodoListAction';
+import { TaskContext } from '../../context/TodoList';
+import { Action } from '../../context/actions/TodoListAction';
 
 function Form() {
   const { dispatch } = React.useContext(TaskContext);
@@ -34,16 +34,17 @@ function Form() {
       <input
         type="text"
         placeholder="title"
+        name="title"
         value={title}
         onChange={(e) => setTitle(e.target.value)}
       />
-      <input
-        type="text"
+      <textarea
         placeholder="description"
+        name="content"
         value={description}
         onChange={(e) => setDescription(e.target.value)}
       />
-      <button type="submit">add</button>
+      <button type="submit" name="send">add</button>
     </form>
   );
 }

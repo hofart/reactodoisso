@@ -1,31 +1,47 @@
-import * as React from 'react';
-import { createGlobalStyle, ThemeProvider } from 'styled-components';
-import dark from './themes/default';
+import styled, { createGlobalStyle } from 'styled-components';
 
 export const GlobalStyled = createGlobalStyle`
-  @import url('https://fonts.googleapis.com/css2?family=Urbanist:ital,wght@0,100;0,400;0,700;1,100;1,400;1,700&display=swap');
-
   * {
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
     background-color: ${(props) => props.theme.dark.colors.black100};
+
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+
+    border: none;
+    outline: none;
+    text-decoration: none;
   }
 
   body {
-    width: min(100% - 2rem, 600px);
-    margin-inline: auto;
+    background-color: ${(props) => props.theme.dark.colors.black100};
+    font-family: ${(props) => props.theme.dark.fonts.primary};
+
+    height: 100vh;
   }
 
-  h1, h2, h3, h4, h5, h6, p, span {
-    font-family: ${(props) => props.theme.dark.fonts.primary};
+  h1, h2, h3, h4, h5, h6, p {
+    color: white;
+  }
+
+  li {
+    list-style: none;
   }
 `;
 
-function ThemeDefault({ children }) {
-  return (
-    <ThemeProvider theme={dark}>{children}</ThemeProvider>
-  );
-}
+export const Main = styled.main`
+  margin-inline: auto;
+  width: min(100% - 2rem, 650px);
+  padding-top: 100px;
+`;
 
-export default ThemeDefault;
+export const Title = styled.h1`
+  font-size: ${(props) => props.Size};
+`;
+
+export const Span = styled.span`
+  color: ${(props) => props.theme.dark.colors.gray100};
+  font-size: ${(props) => props.Size};
+  font-weight: ${(props) => props.Weight};
+  margin-left: ${(props) => props.ML};
+`;
