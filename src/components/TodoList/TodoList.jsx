@@ -1,7 +1,7 @@
 import * as React from 'react';
 import { FaRegTrashAlt } from 'react-icons/fa';
-import { TaskContext } from '../context/TodoList';
-import { Action } from '../context/actions/TodoListAction';
+import { TaskContext } from '../../context/TodoList';
+import { Action } from '../../context/actions/TodoListAction';
 
 function TodoList() {
   const { tasks, dispatch } = React.useContext(TaskContext);

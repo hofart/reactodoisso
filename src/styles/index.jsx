@@ -3,9 +3,7 @@ import { ThemeProvider } from 'styled-components';
 import dark from './themes/default';
 
 function ThemeDefault({ children }) {
-  return (
-    <ThemeProvider theme={dark}>{children}</ThemeProvider>
-  );
+  return <ThemeProvider theme={dark}>{children}</ThemeProvider>;
 }
 
 export default ThemeDefault;

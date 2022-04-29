@@ -2,8 +2,6 @@ import styled, { createGlobalStyle } from 'styled-components';
 
 export const GlobalStyled = createGlobalStyle`
   * {
-    background-color: ${(props) => props.theme.dark.colors.black100};
-
     box-sizing: border-box;
     margin: 0;
     padding: 0;
@@ -14,7 +12,7 @@ export const GlobalStyled = createGlobalStyle`
   }
 
   body {
-    background-color: ${(props) => props.theme.dark.colors.black100};
+    background-color: ${(props) => props.theme.dark.colors.black200};
     font-family: ${(props) => props.theme.dark.fonts.primary};
 
     height: 100vh;
@@ -43,5 +41,23 @@ export const Span = styled.span`
   color: ${(props) => props.theme.dark.colors.gray100};
   font-size: ${(props) => props.Size};
   font-weight: ${(props) => props.Weight};
-  margin-left: ${(props) => props.ML};
+  margin-left: ${(props) => props.marginLeft};
+`;
+
+export const BtnWithIcon = styled.button.attrs({
+  type: 'submit',
+})`
+  background-color: transparent;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+
+  &:hover {
+    cursor: pointer;
+  }
+`;
+
+export const Typography = styled.p`
+  font-size: ${(props) => props.Size || '.875rem'};
+  color: white;
 `;

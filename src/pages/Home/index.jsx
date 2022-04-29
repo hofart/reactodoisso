@@ -1,18 +1,19 @@
-import * as React from 'react';
+import React from 'react';
 import Header from '../../components/Header/Header';
 import SubHeader from '../../components/SubHeader/SubHeader';
-import Form from '../../components/Form/Form';
-import TodoList from '../../components/TodoList';
+import ManageContent from '../../components/ManageContent/ManageContent';
 import { Main } from '../../styles/GlobalStyled';
+import HandleFormProvider from '../../context/FormContent';
 
 function Home() {
   return (
-    <Main>
-      <Header />
-      <SubHeader />
-      <Form />
-      <TodoList />
-    </Main>
+    <HandleFormProvider>
+      <Main>
+        <Header />
+        <SubHeader />
+        <ManageContent />
+      </Main>
+    </HandleFormProvider>
   );
 }
 

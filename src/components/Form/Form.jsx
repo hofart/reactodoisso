@@ -1,11 +1,15 @@
 import * as React from 'react';
 import { TaskContext } from '../../context/TodoList';
 import { Action } from '../../context/actions/TodoListAction';
+import { Form, Input, TextArea } from './Styled';
+import { HandleFormContentContext } from '../../context/FormContent';
 
-function Form() {
+function TodoListForm() {
   const { dispatch } = React.useContext(TaskContext);
+  const { setState } = React.useContext(HandleFormContentContext);
   const [title, setTitle] = React.useState('');
   const [description, setDescription] = React.useState('');
+
   const id = React.useId();
 
   const handleTask = (e) => {
@@ -29,24 +33,25 @@ function Form() {
     return true;
   };
 
+  const handleFormContent = (e) => {
+    e.preventDefault();
+    setState(false);
+  };
+
   return (
-    <form onSubmit={handleTask}>
-      <input
-        type="text"
-        placeholder="title"
-        name="title"
+    <Form onSubmit={handleTask}>
+      <Input
         value={title}
         onChange={(e) => setTitle(e.target.value)}
       />
-      <textarea
-        placeholder="description"
-        name="content"
+      <TextArea
         value={description}
         onChange={(e) => setDescription(e.target.value)}
       />
-      <button type="submit" name="send">add</button>
-    </form>
+      <button type="submit">add</button>
+      <button type="submit" onClick={handleFormContent}>fechar</button>
+    </Form>
   );
 }
 
-export default Form;
+export default TodoListForm;
