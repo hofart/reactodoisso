@@ -6,9 +6,9 @@ export const Box = styled.div`
 `;
 
 export const FormBox = styled.div`
-  display: ${(props) => props.Display};
+  display: ${({ display }) => display};
   padding: .5rem;
-  border: 1px solid ${(props) => props.theme.dark.colors.gray100};
-  border-radius: ${(props) => props.theme.dark.radius.base};
-  background-color: ${(props) => props.theme.dark.colors.black300};
+  border: 1px solid ${({ theme }) => theme.dark.colors.gray100};
+  border-radius: ${({ theme }) => theme.dark.radius.base};
+  background-color: ${({ theme }) => theme.dark.colors.black300};
 `;

@@ -10,7 +10,7 @@ function SubHeader() {
 
   return (
     <BoxSubHeader>
-      <Span Size="1rem">{`${tasks.length} tasks`}</Span>
+      <Span size="1rem">{`${tasks.length} tasks`}</Span>
       {tasks.length ? <FilterBtn filter={FilterTypes} /> : ''}
     </BoxSubHeader>
   );

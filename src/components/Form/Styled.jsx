@@ -1,20 +1,11 @@
 import styled, { css } from 'styled-components';
 
-export const Form = styled.form`
-  display: flex;
-  flex-direction: column;
-  gap: 5px;
-  margin-bottom: 1rem;
-`;
-
 export const FieldsDefaultStyled = () => css`
-  font-family: ${(props) => props.theme.dark.fonts.primary};
+  font-family: ${({ theme }) => theme.dark.fonts.primary};
   font-size: 0.9rem;
-
-  border-radius: ${(props) => props.theme.dark.radius.base};
-  color: ${(props) => props.theme.dark.colors.gray100};
+  border-radius: ${({ theme }) => theme.dark.radius.base};
+  color: ${({ theme }) => theme.dark.colors.gray100};
   background-color: transparent;
-
   padding: .5rem;
   border: none;
 
@@ -25,6 +16,13 @@ export const FieldsDefaultStyled = () => css`
   &::focus-visible {
     background-color: transparent;
   }
+`;
+
+export const Form = styled.form`
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  margin-bottom: 1rem;
 `;
 
 export const Input = styled.input.attrs({
@@ -41,4 +39,9 @@ export const TextArea = styled.textarea.attrs({
 })`
   ${FieldsDefaultStyled};
   resize: none;
+`;
+
+export const Box = styled.div`
+  display: flex;
+  gap: .5rem;
 `;

@@ -25,6 +25,11 @@ function ManageContent() {
             <HiPlusSm />
             <Typography>Add new task</Typography>
           </BtnWithIcon>
+
+          <BtnWithIcon>
+            <HiPlusSm />
+            <Typography>Add new category</Typography>
+          </BtnWithIcon>
         </Box>
       )}
     </div>

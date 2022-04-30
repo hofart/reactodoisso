@@ -6,12 +6,10 @@ export const Ul = styled.ul`
 `;
 
 export const Button = styled.button`
-  background-color: ${(props) => props.theme.dark.colors.gray200};
+  background-color: ${({ theme }) => theme.dark.colors.gray200};
   padding: .2rem .5rem;
-
   font-size: .9rem;
   color: white;
-
   border-radius: 10px;
 
   &:hover {

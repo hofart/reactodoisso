@@ -10,10 +10,10 @@ function Header() {
   return (
     <BoxHeader>
       <Box>
-        <Title Size="20px">{`Today ${currentDate.getDate()}`}</Title>
+        <Title>{`Today ${currentDate.getDate()}`}</Title>
         <Span
-          Size="12px"
-          Weight="900"
+          size="12px"
+          weight="600"
           marginLeft=".5rem"
         >
           {currentDateAndMonth}

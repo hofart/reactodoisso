@@ -11,18 +11,17 @@ export const BoxHeader = styled.header`
 export const Box = styled.div`
   display: flex;
   align-items: baseline;
-  justify-content: ${(props) => props.Content};
+  justify-content: ${({ content }) => content};
 `;
 
 export const Search = styled.input.attrs({ type: 'search' })`
   width: 100%;
   height: 30px;
   padding: 5px;
-
-  border-radius: ${(props) => props.theme.dark.radius.base};
-  background-color: ${(props) => props.theme.dark.colors.gray200};
+  border-radius: ${({ theme }) => theme.dark.radius.base};
+  background-color: ${({ theme }) => theme.dark.colors.gray200};
 
   &:focus {
-    color: ${(props) => props.theme.dark.colors.gray100}
+    color: ${({ theme }) => theme.dark.colors.gray100}
   }
 `;

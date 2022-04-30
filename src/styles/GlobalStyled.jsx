@@ -5,16 +5,14 @@ export const GlobalStyled = createGlobalStyle`
     box-sizing: border-box;
     margin: 0;
     padding: 0;
-
     border: none;
     outline: none;
     text-decoration: none;
   }
 
   body {
-    background-color: ${(props) => props.theme.dark.colors.black200};
-    font-family: ${(props) => props.theme.dark.fonts.primary};
-
+    background-color: ${({ theme }) => theme.dark.colors.black200};
+    font-family: ${({ theme }) => theme.dark.fonts.primary};
     height: 100vh;
   }
 
@@ -34,14 +32,14 @@ export const Main = styled.main`
 `;
 
 export const Title = styled.h1`
-  font-size: ${(props) => props.Size};
+  font-size: clamp(1rem, 2.5vw, 2.5rem);
 `;
 
 export const Span = styled.span`
-  color: ${(props) => props.theme.dark.colors.gray100};
-  font-size: ${(props) => props.Size};
-  font-weight: ${(props) => props.Weight};
-  margin-left: ${(props) => props.marginLeft};
+  color: ${({ theme }) => theme.dark.colors.gray100};
+  font-size: ${({ size }) => size};
+  font-weight: ${({ weight }) => weight};
+  margin-left: ${({ marginLeft }) => marginLeft};
 `;
 
 export const BtnWithIcon = styled.button.attrs({
@@ -57,7 +55,25 @@ export const BtnWithIcon = styled.button.attrs({
   }
 `;
 
+export const Button = styled.button.attrs({
+  type: 'submit',
+})`
+  font-family: ${({ theme }) => theme.dark.fonts.primary};
+  color: white;
+  font-weight: 500;
+  letter-spacing: 1px;
+  text-transform: capitalize;
+  padding: .5rem 1rem;
+  border: ${({ theme, border }) => (border ? `1px solid ${theme.dark.colors.gray100}` : 'none')};
+  border-radius: ${({ theme }) => theme.dark.radius.base};
+  background-color: ${({ theme, bgColor }) => (bgColor ? theme.dark.colors.red : 'transparent')};
+
+  &:hover {
+    cursor: pointer
+  }
+`;
+
 export const Typography = styled.p`
-  font-size: ${(props) => props.Size || '.875rem'};
+  font-size: ${({ size }) => size || '.875rem'};
   color: white;
 `;

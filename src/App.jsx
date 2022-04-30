@@ -3,13 +3,16 @@ import ContextProvider from './context/TodoList';
 import ThemeDefault from './styles/index';
 import { GlobalStyled } from './styles/GlobalStyled';
 import Routes from './routes';
+import HandleFormProvider from './context/FormContent';
 
 function App() {
   return (
     <ThemeDefault>
       <ContextProvider>
-        <GlobalStyled />
-        <Routes />
+        <HandleFormProvider>
+          <GlobalStyled />
+          <Routes />
+        </HandleFormProvider>
       </ContextProvider>
     </ThemeDefault>
   );
