@@ -1,7 +1,7 @@
 import * as React from 'react';
 import { HiPlusSm } from 'react-icons/hi';
-import { BtnWithIcon, Typography } from '../../styles/GlobalStyled';
-import { Box, FormBox } from './Styled';
+import { BtnWithIcon, Typography } from '../../styles/GlobalStyles';
+import { Box, FormBox } from './Styles';
 import Form from '../Form/Form';
 import { HandleFormContentContext } from '../../context/FormContent';
 

@@ -1,7 +1,7 @@
 import React from 'react';
 import ContextProvider from './context/TodoList';
-import ThemeDefault from './styles/index';
-import { GlobalStyled } from './styles/GlobalStyled';
+import ThemeDefault from './styles/ThemeProvider';
+import { GlobalStyled } from './styles/GlobalStyles';
 import Routes from './routes';
 import HandleFormProvider from './context/FormContent';
 

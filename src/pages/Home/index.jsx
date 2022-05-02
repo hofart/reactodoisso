@@ -4,7 +4,7 @@ import SubHeader from '../../components/SubHeader/SubHeader';
 import ManageContent from '../../components/ManageContent/ManageContent';
 import EmptyFigure from '../../components/EmptyFigure/EmptyFigure';
 import TodoList from '../../components/TodoList/TodoList';
-import { Main } from '../../styles/GlobalStyled';
+import { Main } from '../../styles/GlobalStyles';
 import { HandleFormContentContext } from '../../context/FormContent';
 import { TaskContext } from '../../context/TodoList';
 

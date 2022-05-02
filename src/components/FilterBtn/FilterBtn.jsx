@@ -1,5 +1,5 @@
 import React from 'react';
-import { Ul, Button } from './Styled';
+import { Ul, Button } from './Styles';
 
 function FilterBtn({ filter }) {
   return (

@@ -2,10 +2,10 @@ import * as React from 'react';
 import { TaskContext } from '../../context/TodoList';
 import { HandleFormContentContext } from '../../context/FormContent';
 import { Action } from '../../context/actions/TodoListAction';
-import { Button } from '../../styles/GlobalStyled';
+import { Button } from '../../styles/GlobalStyles';
 import {
   Form, Input, TextArea, Box,
-} from './Styled';
+} from './Styles';
 
 function TodoListForm() {
   const { dispatch } = React.useContext(TaskContext);
@@ -36,11 +36,6 @@ function TodoListForm() {
     return true;
   };
 
-  const handleFormContent = (e) => {
-    e.preventDefault();
-    setState(false);
-  };
-
   return (
     <Form onSubmit={handleTask}>
       <Input
@@ -52,8 +47,13 @@ function TodoListForm() {
         onChange={(e) => setDescription(e.target.value)}
       />
       <Box>
-        <Button bgColor type="submit">create task</Button>
-        <Button border type="submit" onClick={handleFormContent}>fechar</Button>
+        <Button bgColor>create task</Button>
+        <Button
+          border
+          onClick={() => setState(false)}
+        >
+          cancel
+        </Button>
       </Box>
     </Form>
   );

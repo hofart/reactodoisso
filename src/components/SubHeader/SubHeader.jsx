@@ -1,6 +1,6 @@
 import * as React from 'react';
-import { Span } from '../../styles/GlobalStyled';
-import { BoxSubHeader } from './Styled';
+import { Span } from '../../styles/GlobalStyles';
+import { BoxSubHeader } from './Styles';
 import { TaskContext } from '../../context/TodoList';
 import { FilterTypes } from '../../data/FilterTypes';
 import FilterBtn from '../FilterBtn/FilterBtn';

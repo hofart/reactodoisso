@@ -1,6 +1,6 @@
 import * as React from 'react';
-import { Title, Span } from '../../styles/GlobalStyled';
-import { Box, BoxHeader, Search } from './Styled';
+import { Title, Span } from '../../styles/GlobalStyles';
+import { Box, BoxHeader, Search } from './Styles';
 import { Months, Days } from '../../data/Dates';
 
 function Header() {
