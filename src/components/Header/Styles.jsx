@@ -14,7 +14,9 @@ export const Box = styled.div`
   justify-content: ${({ content }) => content};
 `;
 
-export const Search = styled.input.attrs({ type: 'search' })`
+export const Search = styled.input.attrs({
+  type: 'search',
+})`
   width: 100%;
   height: 30px;
   padding: 5px;

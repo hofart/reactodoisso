@@ -32,7 +32,7 @@ export const Main = styled.main`
 `;
 
 export const Title = styled.h1`
-  font-size: clamp(1rem, 2.5vw, 2.5rem);
+  font-size: clamp(1.5rem,2vw,2.5rem);
 `;
 
 export const Span = styled.span`
@@ -63,7 +63,7 @@ export const Button = styled.button.attrs({
   font-weight: 500;
   letter-spacing: 1px;
   text-transform: capitalize;
-  padding: .5rem 1rem;
+  padding: ${({ padding }) => (padding ? '.5rem 1rem' : null)};
   border: ${({ theme, border }) => (border ? `1px solid ${theme.dark.colors.gray100}` : 'none')};
   border-radius: ${({ theme }) => theme.dark.radius.base};
   background-color: ${({ theme, bgColor }) => (bgColor ? theme.dark.colors.red : 'transparent')};

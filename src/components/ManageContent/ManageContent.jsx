@@ -1,7 +1,6 @@
 import * as React from 'react';
-import { HiPlusSm } from 'react-icons/hi';
 import { BtnWithIcon, Typography } from '../../styles/GlobalStyles';
-import { Box, FormBox } from './Styles';
+import { Box, FormBox, Icon } from './Styles';
 import Form from '../Form/Form';
 import { HandleFormContentContext } from '../../context/FormContent';
 
@@ -22,12 +21,12 @@ function ManageContent() {
       ) : (
         <Box>
           <BtnWithIcon onClick={handleFormContent}>
-            <HiPlusSm />
+            <Icon />
             <Typography>Add new task</Typography>
           </BtnWithIcon>
 
           <BtnWithIcon>
-            <HiPlusSm />
+            <Icon />
             <Typography>Add new category</Typography>
           </BtnWithIcon>
         </Box>

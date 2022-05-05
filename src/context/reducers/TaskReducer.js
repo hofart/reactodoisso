@@ -6,6 +6,8 @@ export const TaskReducer = (state, action) => {
       return [...state, action.task];
     case Action.removeTask:
       return state.filter((task) => task.id !== action.id);
+    case Action.checkTask:
+      return console.log(state, action);
     default:
       return state;
   }

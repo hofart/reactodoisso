@@ -12,7 +12,6 @@ function TodoListForm() {
   const { setState } = React.useContext(HandleFormContentContext);
   const [title, setTitle] = React.useState('');
   const [description, setDescription] = React.useState('');
-
   const id = React.useId();
 
   const handleTask = (e) => {
@@ -23,10 +22,10 @@ function TodoListForm() {
     dispatch({
       type: Action.addTask,
       task: {
-        id: `${id}-${title}`,
+        id: `${id}-${parseInt(Math.random() * 9999, 9)}`,
         title,
         description,
-        done: false,
+        isChecked: false,
       },
     });
 
@@ -47,11 +46,10 @@ function TodoListForm() {
         onChange={(e) => setDescription(e.target.value)}
       />
       <Box>
-        <Button bgColor>create task</Button>
-        <Button
-          border
-          onClick={() => setState(false)}
-        >
+        <Button bgColor padding>
+          create task
+        </Button>
+        <Button border padding onClick={() => setState(false)}>
           cancel
         </Button>
       </Box>
