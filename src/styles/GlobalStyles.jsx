@@ -1,30 +1,5 @@
 import styled, { createGlobalStyle } from 'styled-components';
 
-export const GlobalStyled = createGlobalStyle`
-  * {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-    border: none;
-    outline: none;
-    text-decoration: none;
-  }
-
-  body {
-    background-color: ${({ theme }) => theme.dark.colors.black200};
-    font-family: ${({ theme }) => theme.dark.fonts.primary};
-    height: 100vh;
-  }
-
-  h1, h2, h3, h4, h5, h6, p {
-    color: white;
-  }
-
-  li {
-    list-style: none;
-  }
-`;
-
 export const Main = styled.main`
   margin-inline: auto;
   width: min(100% - 2rem, 650px);
@@ -32,7 +7,7 @@ export const Main = styled.main`
 `;
 
 export const Title = styled.h1`
-  font-size: clamp(1.5rem,2vw,2.5rem);
+  font-size: clamp(1.5rem, 2vw, 2.5rem);
 `;
 
 export const Span = styled.span`
@@ -76,4 +51,29 @@ export const Button = styled.button.attrs({
 export const Typography = styled.p`
   font-size: ${({ size }) => size || '.875rem'};
   color: white;
+`;
+
+export const GlobalStyled = createGlobalStyle`
+  * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    border: none;
+    outline: none;
+    text-decoration: none;
+  }
+
+  body {
+    background-color: ${({ theme }) => theme.dark.colors.black200};
+    font-family: ${({ theme }) => theme.dark.fonts.primary};
+    height: 100vh;
+  }
+
+  h1, h2, h3, h4, h5, h6, p {
+    color: white;
+  }
+
+  li {
+    list-style: none;
+  }
 `;
